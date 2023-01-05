@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link rel="stylesheet" href="./landing.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+  </head>
+  <body>
+    <main id="container">
+      <section id="section1">
+        <nav>
+            <div id="text3d"><h1>LIFEBOOK</h1></div>
+            <div class="openMenu"><i class="fa fa-bars"></i></div>
+            <ul class="mainMenu">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="./signIn&signUp/index.html">Log In/Sign up</a></li>
+                <div class="closeMenu"><i class="fa fa-times"></i></div>
+                <span class="icons">
+                  <a href="https://google.com/"><i class="fab fa-google"></i></a>
+                  <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+                  <a href="https://instagram.com/"><i class="fab fa-instagram"></i></a>
+                  <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                </span>
+            </ul>
+          </nav>
+      </section>
+      <section id="section2">
+        <div id="picDiv">
+            <h1>Create Your LIFE'S BOOK </h1>
+            <ul>
+                <li>Post pictures from your daily life</li>
+                <li>Express your opinion on an article you read recently</li>
+                <li>Talk about news and current events</li>
+                <li>Offer advice on how to do/achieve something</li>
+                <li>Ask questions and solicit opinions from followers</li>
+            </ul>
+            <button class="btn-12"><span id="clickMe">Click!</span><span>Learn More</span></button>
+        </div>
+        <div id="informDiv"><img src="./images/diary.png" alt=""></div>
+      </section>
+    </main>
+    <script>
+      document.querySelector('#clickMe').addEventListener('click', () =>  window.location.assign("https://www.lifebookuk.com/"));
+    </script>
+    <script src="./scripts/app.js"></script>
+  </body>
+</html>

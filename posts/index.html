@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Post Page</title>
+    <link rel="stylesheet" href="../landing.css" />
+    <link rel="stylesheet" href="./posts.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <script src="../scripts/auth.js"></script>
+    <script>
+      if (isLoggedIn() === false) window.location.replace("../");
+    </script>
+  </head>
+  <body>
+    <main id="container">
+      <section id="section1">
+        <nav>
+            <div id="text3d"><h1>LIFEBOOK</h1></div>
+            <div class="openMenu"><i class="fa fa-bars"></i></div>
+            <ul class="mainMenu">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li id="logOut"><a href="#">Log Out</a></li>
+                <div class="closeMenu"><i class="fa fa-times"></i></div>
+                <span class="icons">
+                  <a href="https://google.com/"><i class="fa-brands fa-google"></i></a>
+                  <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+                  <a href="https://instagram.com/"><i class="fab fa-instagram"></i></a>
+                  <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                </span>
+            </ul>
+          </nav>
+      </section>
+      <section id="postSection2">
+        <!-- <div id="child"> -->
+          <!-- <img id="onlineProfile" src="../images/background-husky.jpeg" alt=""> -->
+          <!-- <p>cnjdncn</p> -->
+          <!-- <img id="onlineProfile" src="../images/online-green.jpeg" alt=""> -->
+          <!-- <img id="onlineProfile" src="../images/offline-red.png" alt=""> -->
+        <!-- </div> -->
+
+      </section>
+      <section id="section3">
+        <div id="profileDiv">
+          <a href="../profile/profile.html"><img id="profileImg" src="../images/User-user.svg"; alt="profile pic" ></a>
+          <p id="userName">Clever Husky </p>
+          <p id="bio">Physical Therapist</p>
+          <!-- <img id="onlineGreen" src="../images/online-green.jpeg"; alt="cdhsbci"> -->
+        </div>
+        <div id="formDiv">
+          <div class="searchContainer">
+            <div class="searchBar">
+              <div id="select">
+                <select name="tags" id="selectTag">
+                  <option value="">Search By</option>
+                  <option value="postId">Post ID</option>
+                  <option value="username">Username</option>
+                  <option value="accOrder">Accending Order</option>
+                  <option value="decOrder">Decending Order</option>
+                </select>
+              </div>
+              <input id="searchInput" type="text" placeholder="Search Post">
+            </div>
+          </div>
+          <form  id="profileForm" action=""> 
+            <input id="inputField" type="text" name="text" placeholder="What's on your mind ?">
+            <input id="postBtn" type="submit" value="Post">
+          </form>
+        </div>
+      </section>
+      <section id="section4">
+      </section>
+    </main>
+    <script src="../scripts/app.js"></script>
+    <!-- <script src="../scripts/auth.js"></script> -->
+    <script  type="module" src="./posts.js"></script>
+    <!-- <script src="../scripts/displayProfile.js"></script> -->
+    
+  </body>
+</html>

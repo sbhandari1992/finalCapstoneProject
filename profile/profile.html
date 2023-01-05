@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="../landing.css" />
+    <link rel="stylesheet" href="./profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <script src="../scripts/auth.js"></script>
+    <script>
+      if (isLoggedIn() === false) window.location.replace("../");
+    </script>
+  </head>
+  <body>
+    <main id="container">
+      <section id="section1">
+        <nav>
+            <div id="text3d"><h1>LIFEBOOK</h1></div>
+            <div class="openMenu"><i class="fa fa-bars"></i></div>
+            <ul class="mainMenu">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li id="logOut"><a href="">Log Out</a></li>
+                <div class="closeMenu"><i class="fa fa-times"></i></div>
+                <span class="icons">
+                  <a href="https://google.com/"><i class="fa-brands fa-google"></i></a>
+                  <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+                  <a href="https://instagram.com/"><i class="fab fa-instagram"></i></a>
+                  <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                </span>
+            </ul>
+          </nav>
+      </section>
+      <section id="postSection2">
+        <div id="postImgDiv">
+          <img class="coverPic" src="../images/image.jpeg" alt="" width="1000px">
+        </div>
+      </section>
+      <!-- i need to create this by javascript -->
+      <section id="section3">
+        <div id="profileDiv">
+          <img id="profileImg" src="../images/User-user.svg"; alt="cdhsbci" >
+          <p id="userName">Clever Husky </p>
+          <p id="bio">Physical Therapist</p>
+          <!-- <img id="onlineGreen" src="../images/online-green.jpeg"; alt="cdhsbci"> -->
+        </div>
+        <div id="formDiv">
+          <form id="profileForm" action=""> 
+            <input id="inputField" type="text" name="text" placeholder="What's on your mind ?">
+            <input id="postBtn" type="submit" value="Post">
+          </form>
+          <button id="feedBtn">Feeds</button>
+        </div>
+      </section>
+      <section id="section4">
+      </section>
+    </main>
+    <script src="../scripts/app.js"></script>
+    <script type="module" src="./profile.js"></script>
+    <!-- <script src="../scripts/displayProfile.js"></script> -->
+  </body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign in page</title>
+    <link rel="stylesheet" href="./signIn&signUp.css">
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"
+      integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o="
+      crossorigin="anonymous"
+    /> -->
+    <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+    <!-- <script>
+        //if (isLoggedIn() === false) window.location.replace("./");
+    </script> -->
+    <script src="../scripts/auth.js"></script>
+    <script>
+      if (isLoggedIn() === true) window.location.replace("../posts/");
+      //if (isLoggedIn() === false) window.location.replace("/");
+    </script>
+
+</head>
+<body>
+    
+    <div class="main">
+        <div class="container">
+          <a href="../index.html"><div id="text3d"><h1>LIFEBOOK</h1></div></a>
+          <div class="signUpContainer">
+            <form id="signUpForm">
+              <div class="text">Create Account</div>
+              <input type="text" id="fullname" name="fullName" placeholder="Fullname" minlength="2" required>
+              <input type="username" id="username" name="username"  placeholder="Username" minlength="2" required>
+              <input type="password"  id="password" name="password" placeholder="Password" minlength="2" required>
+              <button id="registerBtn" class="form_btn">Sign Up</button>
+
+              <span class="spanText">or</span>
+              <span class="spanText">Sign Up with</span>
+
+              <div class="social-links">
+                <div>
+                    <a href="#"><i class="fa fa-google" aria-hidden="true"></i></a>
+                  </div>
+                <div>
+                  <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                </div>
+                <div>
+                  <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                </div>
+                <div>
+                    <a href="#"><i class=" fa fa-instagram" aria-hidden="true"></i></a>
+
+                </div>
+
+              </div>
+            </form>
+          </div>
+          <div class="signInContainer">
+            <form id="loginForm">
+                <div class="text">Login Form</div>
+                <div class="field">
+                    <input type="text"  name="username" placeholder="Username" minlength="4" required>
+                    <span class="fa fa-user"></span>
+                  </div>
+                  <div class="field">
+                    <input type="password"  name="password" placeholder="Password"  minlength="4" required>
+                    <span class="fa fa-lock"></span>
+                  </div>
+              <div class="forgot-pass">
+                <a href="https://support.google.com/">Forgot Password?</a>
+              </div>
+              <button id="loginButton" class="form_btn" type="submit">Sign In</button>
+              <!-- <button id="loginButton" type="submit">LOGIN</button> -->
+
+
+              
+
+            </form>
+          </div>
+          <div class="overlay-container">
+            <div class="overlayLeft">
+              <h1>Welcome Back</h1>
+              <p>" To keep in touch with us please login with your personal info "</p>
+              <button id="signIn" class="overlay_btn">Sign In</button>
+            </div>
+            <div class="overlayRight">
+              <h1>Not a member ?</h1>
+              <p>" Enter your personal details and start journey with us from today "</p>
+              <button id="signUp" class="overlay_btn" type="submit">Sign Up</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script src="./signIn&signUp.js"></script>
+      <!-- <script type="" src="../scripts/auth.js"></script> -->
+    
+</body>
+</html>
