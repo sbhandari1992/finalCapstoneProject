@@ -8,23 +8,31 @@ let postUrl = 'https://microbloglite.herokuapp.com/api/posts'
 
 let formJSON;
 export function collectAndSendData(evt) {
+    // browser.history.deleteAll()
     evt.preventDefault();
     const data = new FormData(evt.target);
     formJSON = Object.fromEntries(data.entries());
     console.log(formJSON);
     setTimeout(postFormData, 300);
     setTimeout(() => {
+        window.location.reload(true);
         displayPosts()
     },500)
+    // window.location.reload(true);
 
 }
 export function collectAndSendDataForSpecificUser(evt) {
+
+
     evt.preventDefault();
     const data = new FormData(evt.target);
     formJSON = Object.fromEntries(data.entries());
     console.log(formJSON);
     setTimeout(postFormData, 300);
+    // window.location.replace('/');
     setTimeout(() => {
+        // browser.history.deleteAll()
+        window.location.reload(true);
         displayPosts(loginData.username)
     },500)
 

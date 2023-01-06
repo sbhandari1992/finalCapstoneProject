@@ -11,7 +11,7 @@ export function showOnlinePerson() {
     .then((results) => results.json())
     .then((data) => {
       data.forEach((arrItem) => {
-        let hourToShowOnline = 4;
+        let hourToShowOnline = 1;
         let actualPostTime = arrItem.createdAt;
         let postTimeMilSec = new Date(actualPostTime).getTime();
         let increasePostTime = postTimeMilSec + hourToShowOnline * 60 * 60 * 1000;
@@ -20,7 +20,6 @@ export function showOnlinePerson() {
         // postSection2.style.display = "none";
         if (increasePostTime > currentTimeMiliSec) {
           if (!allOnlineUsers.includes(arrItem.username)) {
-            console.log("yes");
             allOnlineUsers.push(arrItem.username);
             const childElement = document.createElement("div");
             childElement.classList.add("child");

@@ -47,6 +47,7 @@ function sendData() {
     window.localStorage.setItem("register-data",JSON.stringify(data));
     window.location.assign("./index.html"); // redirect
     signUpForm.registerBtn.disabled = true;
+    
 
 
    })
